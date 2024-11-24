@@ -3,14 +3,8 @@
 
 Zombie::Zombie(void)
 {
+    std::cout << "Zombie Constructor Called" << std::endl;
     this->_name = "NameLess";
-    std::cout << "Default Zombie Constructor Called" << std::endl;
-}
-
-Zombie::Zombie(std::string name)
-{
-    this->_name = name;
-    std::cout << name << " Zombie Constructor Called" << std::endl;
 }
 
 Zombie::~Zombie(void)
@@ -21,4 +15,9 @@ Zombie::~Zombie(void)
 void Zombie::announce(void)
 {
     std::cout << this->_name << ": BraiiiiiiinnnzzzZ..." << std::endl;
+}
+
+void Zombie::setName(const std::string name)
+{
+    this->_name = name;
 }
